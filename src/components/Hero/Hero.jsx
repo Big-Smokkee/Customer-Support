@@ -8,7 +8,6 @@ const Hero = () => {
             </div>
             <div className='h-44 md:h-62.5 w-100 md:w-175  flex flex-col items-center justify-center  rounded-xl bg-linear-to-br from-[#54CF68] to-[#00827A] border-none shadow-sm transition'>
                 <h1 className='text-[18px] md:text-2xl'>Resolved</h1>
-                <img src="" alt="" />
                 <h1 className='text-3xl md:text-7xl font-semibold'>0</h1>
             </div>
         </div>
