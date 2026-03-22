@@ -5,11 +5,11 @@ const Tickets = ({ ticketsPromise }) => {
     const tickets = use(ticketsPromise)
     return (
         <div>
-            <h3 className='text-[#34485A] text-2xl font-semibold'>Customer Tickets</h3>
-            <div className='flex flex-cols flex-wrap md:flex-row space-x-6 space-y-4'>
-                {
-                    tickets.map(ticket => <Ticket ticket={ticket} ke={ticket.id}></Ticket>)
-                }
+            <h3 className="text-[#34485A] text-2xl font-semibold mb-4">Customer Tickets</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {tickets.map(ticket => (
+                    <Ticket key={ticket.id} ticket={ticket}></Ticket>
+                ))}
             </div>
         </div>
     );
