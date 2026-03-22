@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1001,
+    "title": "Login Issues - Can't Access Account",
+    "description": "Customer is unable to log in despite multiple password resets.",
+    "priority": "High",
+    "agent": "John Smith",
+    "status": "Open",
+    "date": "2024-01-15"
+  },
+  {
+    "id": 1002,
+    "title": "Payment Failed - Card Declined",
+    "description": "Visa card ending 1234 keeps failing despite sufficient balance.",
+    "priority": "High",
+    "agent": "Sarah Johnson",
+    "status": "Open",
+    "date": "2024-01-16"
+  },
+  {
+    "id": 1003,
+    "title": "Unable to Download Invoice",
+    "description": "Customer cannot download January invoice from billing section.",
+    "priority": "Medium",
+    "agent": "Michael Brown",
+    "status": "In-Progress",
+    "date": "2024-01-17"
+  },
+  {
+    "id": 1004,
+    "title": "Incorrect Billing Address",
+    "description": "Billing address shows wrong city even after update.",
+    "priority": "Low",
+    "agent": "Emily Davis",
+    "status": "Open",
+    "date": "2024-01-18"
+  },
+  {
+    "id": 1005,
+    "title": "App Crash on Launch",
+    "description": "Mobile app crashes immediately on Android 13.",
+    "priority": "High",
+    "agent": "David Wilson",
+    "status": "Open",
+    "date": "2024-01-19"
+  },
+  {
+    "id": 1006,
+    "title": "Refund Not Processed",
+    "description": "Refund requested two weeks ago not received yet.",
+    "priority": "Medium",
+    "agent": "Sophia Taylor",
+    "status": "In-Progress",
+    "date": "2024-01-20"
+  },
+  {
+    "id": 1007,
+    "title": "Two-Factor Authentication Issue",
+    "description": "Customer not receiving 2FA codes on registered phone.",
+    "priority": "High",
+    "agent": "James Anderson",
+    "status": "Open",
+    "date": "2024-01-21"
+  },
+  {
+    "id": 1008,
+    "title": "Unable to Update Profile Picture",
+    "description": "Upload failed error when changing profile picture.",
+    "priority": "Low",
+    "agent": "Olivia Martinez",
+    "status": "Open",
+    "date": "2024-01-22"
+  },
+  {
+    "id": 1009,
+    "title": "Subscription Auto-Renewal",
+    "description": "Toggle for auto-renewal disabled in subscription settings.",
+    "priority": "Medium",
+    "agent": "Liam Thomas",
+    "status": "In-Progress",
+    "date": "2024-01-27"
+  },
+  {
+    "id": 1010,
+    "title": "Missing Order Confirmation Email",
+    "description": "Order placed but no confirmation email received.",
+    "priority": "Medium",
+    "agent": "Isabella Garcia",
+    "status": "Open",
+    "date": "2024-01-24"
+  },
+  {
+    "id": 1011,
+    "title": "Slow Website Performance",
+    "description": "Pages take too long to load during peak hours.",
+    "priority": "Medium",
+    "agent": "Daniel Lee",
+    "status": "Open",
+    "date": "2024-01-25"
+  },
+  {
+    "id": 1012,
+    "title": "Email Notifications Not Working",
+    "description": "Customer not receiving any system notifications.",
+    "priority": "Low",
+    "agent": "Emma White",
+    "status": "In-Progress",
+    "date": "2024-01-26"
+  },
+  {
+    "id": 1013,
+    "title": "Account Locked After Failed Attempts",
+    "description": "Account locked too quickly after 2 failed login attempts.",
+    "priority": "High",
+    "agent": "Chris Evans",
+    "status": "Open",
+    "date": "2024-01-28"
+  },
+  {
+    "id": 1014,
+    "title": "Mobile Notifications Delayed",
+    "description": "Push notifications arrive 30 minutes late on iOS devices.",
+    "priority": "Medium",
+    "agent": "Sophia Green",
+    "status": "In-Progress",
+    "date": "2024-01-29"
+  }
+]
