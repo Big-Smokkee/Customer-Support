@@ -1,11 +1,12 @@
 import './App.css'
+import Navbar from './components/Navbar/Navbar'
 
 function App() {
 
   return (
     <>
       <main data-theme="light" className='inter'>
-        <h2 className='btn'>khali bali</h2>
+        <Navbar></Navbar>
       </main>
     </>
   )
