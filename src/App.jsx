@@ -4,7 +4,7 @@ import Hero from './components/Hero/Hero'
 import Navbar from './components/Navbar/Navbar'
 import Tickets from './components/Tickets/Tickets'
 import StatusTasks from './components/StatusTasks/StatusTasks'
-import ResolvedTask from './components/ResolvedTask/ResolvedTask'
+import ResolvedTasks from './components/ResolvedTasks/ResolvedTasks'
 import { toast } from 'react-toastify';
 const ticketsFunction = async () => {
   const res = await fetch('/tickets.json');
@@ -19,12 +19,23 @@ function App() {
   const [progressTaskNumber, setProgressTaskNumber] = useState([]);
   // ticket state progress or open
   const [status, setStatus] = useState({});
+  // resolved task
+  const [resolveTaskNumber, setResolveTaskNumber] = useState([]);
 
   const handleProgressTaskNumber = (ticket) => {
     const newTask = [...progressTaskNumber];
     newTask.push(ticket);
     setProgressTaskNumber(newTask);
     toast('Task is In-Progress');
+  }
+  const handleResolveTaskNumber = (ticket) => {
+    console.log(ticket);
+    const newTask = [...resolveTaskNumber];
+    newTask.push(ticket);
+    setResolveTaskNumber(newTask);
+    toast('Task is Resolved');
+    const anotherArray = progressTaskNumber.filter(task => ticket.id !== task.id);
+    setProgressTaskNumber(anotherArray);
   }
 
   const handleStatus = (ticket) => {
@@ -37,7 +48,7 @@ function App() {
     <>
       <main data-theme="light" className='inter'>
         <Navbar></Navbar>
-        <Hero progressTaskNumber={progressTaskNumber}></Hero>
+        <Hero progressTaskNumber={progressTaskNumber} resolveTaskNumber={resolveTaskNumber}></Hero>
         <div className="px-6 md:px-20 flex flex-col md:flex-row gap-6">
           {/* Left side: tickets */}
           <div className="w-full md:w-4/6">
@@ -49,8 +60,8 @@ function App() {
           {/* Right side: status + resolved */}
           <div className="w-full md:w-2/6 flex flex-col gap-6">
             {/* <StatusTasks progressTaskNumber={progressTaskNumber}></StatusTasks> */}
-            <StatusTasks progressTaskNumber={progressTaskNumber}> </StatusTasks>
-            <ResolvedTask></ResolvedTask>
+            <StatusTasks progressTaskNumber={progressTaskNumber} resolveTaskNumber={resolveTaskNumber} handleResolveTaskNumber={handleResolveTaskNumber}> </StatusTasks>
+            <ResolvedTasks resolveTaskNumber={resolveTaskNumber}></ResolvedTasks>
           </div>
         </div>
       </main>
