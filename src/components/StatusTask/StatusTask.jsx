@@ -1,10 +1,10 @@
 import React from 'react';
 
-const StatusTask = () => {
+const StatusTask = ({ task }) => {
     return (
-        <div className='border border-gray-200 shadow-xl p-3'>
-            <h3 className='text-[#34485A] text-2xl font-semibold mb-4'>Task Status</h3>
-            <p className='text-gray-500'>Select a ticket to add to Task Status</p>
+        <div className='border border-gray-200 p-1 rounded-xl my-2 shadow-lg'>
+            <h3 className='text-lg font-medium'>{task.title}</h3>
+            <button className="btn btn-active btn-success text-white font-semibold w-full">Success</button>
         </div>
     );
 };
