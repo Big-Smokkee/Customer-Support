@@ -5,7 +5,7 @@ import { faCalendar } from "@fortawesome/free-solid-svg-icons/faCalendar";
 
 const Ticket = ({ ticket, handleProgressTaskNumber, status, handleStatus }) => {
     return (
-        <section className="p-4 border border-gray-200 rounded-lg shadow-sm w-112.5 cursor-pointer  hover:bg-gray-200" onClick={() => {
+        <section className="p-4 border border-gray-200 rounded-lg shadow-sm w-full cursor-pointer  hover:bg-gray-200" onClick={() => {
             handleProgressTaskNumber(ticket)
             handleStatus(ticket)
         }}>
