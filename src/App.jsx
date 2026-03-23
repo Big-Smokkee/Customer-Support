@@ -50,16 +50,14 @@ function App() {
         <Navbar></Navbar>
         <Hero progressTaskNumber={progressTaskNumber} resolveTaskNumber={resolveTaskNumber}></Hero>
         <div className="px-6 md:px-20 flex flex-col md:flex-row gap-6">
-          {/* Left side: tickets */}
+          {/* left side section */}
           <div className="w-full md:w-4/6">
             <Suspense fallback={<h4>loading</h4>}>
-              <Tickets ticketsPromise={ticketsPromise} handleProgressTaskNumber={handleProgressTaskNumber} status={status} handleStatus={handleStatus}></Tickets>
+              <Tickets ticketsPromise={ticketsPromise} handleProgressTaskNumber={handleProgressTaskNumber} status={status} handleStatus={handleStatus} resolveTaskNumber={resolveTaskNumber}></Tickets>
             </Suspense>
           </div>
-
-          {/* Right side: status + resolved */}
+          {/* right side section */}
           <div className="w-full md:w-2/6 flex flex-col gap-6">
-            {/* <StatusTasks progressTaskNumber={progressTaskNumber}></StatusTasks> */}
             <StatusTasks progressTaskNumber={progressTaskNumber} resolveTaskNumber={resolveTaskNumber} handleResolveTaskNumber={handleResolveTaskNumber}> </StatusTasks>
             <ResolvedTasks resolveTaskNumber={resolveTaskNumber}></ResolvedTasks>
           </div>
