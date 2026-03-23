@@ -3,22 +3,23 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { faCalendar } from "@fortawesome/free-solid-svg-icons/faCalendar";
 
-const Ticket = ({ ticket }) => {
+const Ticket = ({ ticket, handleProgressTaskNumber, status, handleStatus }) => {
     return (
-        <section className="p-4 border border-gray-200 rounded-lg shadow-sm w-112.5">
+        <section className="p-4 border border-gray-200 rounded-lg shadow-sm w-112.5 cursor-pointer  hover:bg-gray-200" onClick={() => {
+            handleProgressTaskNumber(ticket)
+            handleStatus(ticket)
+        }}>
             {/* Top row: title + status badge */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <h3 className="text-lg font-medium">{ticket.title}</h3>
                 <h3
                     className={`flex items-center gap-2 px-3 py-1 rounded-2xl text-sm font-medium 
-        ${ticket.status === 'Open'
+        ${status === 'Open'
                             ? 'bg-green-200 text-green-700'
-                            : ticket.status === 'In-Progress'
-                                ? 'bg-yellow-200 text-yellow-700'
-                                : 'bg-blue-200 text-blue-700'}`}
+                            : 'bg-yellow-200 text-yellow-700'}`}
                 >
-                    <FontAwesomeIcon icon={faCircle} />
-                    {ticket.status}
+                    <FontAwesomeIcon icon={faCircle} /><span>{status === 'Open' ? 'Open' : 'In-Progress'}</span>
+
                 </h3>
             </div>
 
